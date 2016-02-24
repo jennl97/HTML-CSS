@@ -1,0 +1,155 @@
+body {
+    font-family: arial, helvetica, sans-serif;
+}
+
+header {
+    height: 100px;
+    background-size: cover;
+    background-color: darkcyan;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+main img{
+    align-content: center;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*This allows me to place a PNG of a logo in the website. Not sure what z-index means. But it worked so I kept it. From Lynda.com*/
+
+header a.logo {
+    align-content: center;
+    position: absolute;
+    display: block;
+    width: 154px;
+    height: 57px;
+    background: url(all_night_coffee_logo.jpg) no-repeat 0 0;
+    background-size: contain;
+    z-index: 5;
+    top: 15px;
+    left: 20px;
+}
+
+
+
+
+/*This got rid of the typed link, and turned the PNG into the link instead. From Lynda.com*/
+
+header a.logo span {
+    display: none;
+}
+
+/*This is actually the nav bar, but with a black bar. Creates a cool header look. From Lynda.com*/
+
+nav {
+    background-color: rgba(0, 0, 0, .6);
+    position: relative;
+    padding: 45px 0px 0px 180px;
+}
+
+
+/*Menu rules go here*/
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+nav ul::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+nav ul li:hover{
+    background-color: cadetblue;
+}
+
+nav ul li:hover > ul{
+    display: block;
+}
+
+nav ul li a{
+    display: inline-block;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    width: 125px;    
+}
+
+nav ul li a:hover{
+    background-color: cadetblue;
+}
+
+nav ul ul{
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: rgba(0, 102,102, .8);
+}
+
+nav ul ul li{
+    position: relative;
+}
+
+nav ul ul ul{
+    left: 100%;
+    top: 0;
+}
+
+
+/*Top Level CSS Override rules*/
+
+nav > ul{
+    padding-left: 35px;
+}
+
+nav > ul > li{
+    float: left;
+}
+
+nav > ul > li > a{
+    padding: 10px 20px 15px 20px;
+    width: auto;
+}
+
+/*This code makes the site responsive. Need to do more research on how exactly it works*/
+@media screen and (max-width: 750px) {
+	
+	header a.logo {
+        width: 120px;
+        height: 44px; }
+    
+	main { 
+        width: 100%; 
+        float: none; 
+        margin-bottom: 40px; }
+    
+	main div {
+        margin: 0px 40px; 
+        padding: 0px 0px 30px 0px; 
+        border-right: none; 
+        border-bottom: 1px solid #555; }
+    
+	aside {
+        width: 100%; 
+        float: none; }
+    
+    nav {
+        padding: 70px 0px 0px 10px;    
+    
+    }
+    
+    nav > ul {
+        padding-left: 0px;
+        padding-right: 20px;
+    }
+    
+    nav > ul > li > a{
+        padding: 8px 12px 10px 12px;
+    }
+

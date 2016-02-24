@@ -1,0 +1,1 @@
+<p style="text-align:center">And the footer appeared</p>

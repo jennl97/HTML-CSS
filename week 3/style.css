@@ -1,0 +1,176 @@
+body{
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.2em;
+    background-color: antiquewhite;
+    }
+
+header{
+    text-align: center;
+    padding: 15px; 
+}
+
+
+h1, h2{
+    color: maroon;
+   }
+
+p{
+    text-align: justify;
+    color: maroon;
+    
+}
+
+nav ul{
+    padding: 10px;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: maroon;
+
+}
+
+nav li{
+    display: inline;
+    list-style-type:none;
+    }
+
+nav a{
+    font-family: sans-serif;
+    color: maroon;
+    padding: 5px;
+    text-transform: uppercase;
+    font-size: 1.0em;
+    }
+
+nav a:current{
+    color: maroon;
+}
+
+nav a:hover{
+    color: magenta;
+}
+
+.container{
+    max-width: 80em;
+    margin: auto;
+    padding: 15px;
+}
+
+p{
+    text-align: justify;
+}
+
+footer{
+    padding: 15px;
+    
+    
+}
+
+footer p{
+    text-align: center;
+    font-size: 1.0em;
+}
+
+.home-img{
+    height: 50%;
+}
+
+/*Clearfix, not sure what it does, but..*/
+
+.clearfix:before,
+.clearfix:after{
+    content: '';
+    display: table;
+}
+
+.clearfix:after{
+    clear: both;
+}
+
+/*All Grids per Meri's example */
+
+figure{
+    margin: 0;
+}
+
+figure img{
+    width: 100%;
+    display: block;
+}
+
+/* Floating grid layout */
+
+.floating-grid figure{
+    width: 25%;
+    float: left;
+    margin: 0;
+}
+
+.floating-grid figure:nth-of-type(4n+1){
+    /* selects the first image of each row (because 4 columns) and clears the float to make sure that it lines up in a grid. Again.. not sure what this means, but boss lady told me to.*/
+    clear: left;
+}
+
+/*Column grid layout*/
+
+.column-grid .gallery{
+    /*Remember to use browser prefixes!!*/
+    -webkit-columns: 3;
+    -moz-columns: 3;
+    columns: 3;
+}
+
+.column-grid figure{
+    margin: 0 0 20px;
+    width: 100%;
+}
+
+.column-grid figure img{
+    border: 15px solid rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+    /*This keeps the border from adding width to the image box*/
+    
+}
+
+/*Caption gallery layout */
+
+.caption-grid .gallery{
+    /*Remember to use browser prefixes!!*/
+    -webkit-columns: 3;
+    -moz-columns: 3;
+    columns: 3;
+}
+
+.caption-grid figure{
+    margin: 0 0 20px;
+    width: 100%;
+    position: relative;
+    /*We need a relative each time we have an absolute*/
+    
+}
+
+.caption-grid figcaption{
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    border-style: solid;
+    border-color: #fff;
+    border-width: 0 5px 5px;
+    position: absolute;
+    /*This is the absolute mentioned before. On a parent element, this makes sure the captions line up in the right place*/
+    width: 100%;
+    bottom: 0px;
+
+}
+
+.caption-grid figure img{
+    border-width: 5px 5px 0;
+}
+
+.caption-grid figcaption,
+.caption-grid figure img{
+    border-style: solid;
+    border-color: #fff;
+    box-sizing: border-box;
+}
